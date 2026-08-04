@@ -1,0 +1,124 @@
+Senior Cloud Solution Architect (OCI) 
+Arrow Electronics, Inc logo
+Arrow Electronics, Inc
+Tunis, Tunisia
+9 hours ago
+·Application closes in 119 days
+Apply on company site
+Remote
+Other Business Support Services
+Job Description
+Position:Senior Cloud Solution Architect (OCI)
+Job Description:
+Role Overview 
+
+
+
+We are seeking a Senior Cloud Solution Architect to lead solution design and technical strategy for Oracle Cloud Infrastructure (OCI) presales across a partner-led ecosystem, with a focus on Arrow Electronics and its channel partner network. 
+
+
+
+
+This role operates at the intersection of hyperscaler innovation with focus on Oracle Cloud Infrastructure (OCI), partner enablement, and customer transformation, driving scalable, repeatable cloud, data, AI, and security solutions through indirect sales motions.
+The ideal candidate has an engaging people style while being an OCI strategist, architect, and field advisor, enabling partners to deliver high-impact solutions centered on Oracle Cloud Infrastructure (OCI), hybrid and associated hyperscalers supporting Arrow’s OCI go-to-market priorities.
+
+
+
+
+What You'll Be Doing
+
+
+
+Lead architecture design for Oracle Cloud Infrastructure (OCI) with related data, AI, and security solutions delivered through partners and resellers.
+Work across OCI offering stack: OCI infrastructure architecture; data platforms, associated Oracle/Custom/ISV Applications
+Develop repeatable solution frameworks and reference architecture aligned to Arrow and OCI priorities.
+Support partner enablement, including technical workshops, architecture guidance, and co-selling motions.
+Engage with customers, partners, and internal sales teams to shape complex opportunities and drive deals forward.
+Collaborate with adjacent hyperscaler teams (for example, Microsoft and AWS teams) on architecture, co-sell opportunities, incentives, and GTM alignment with Arrow’s OCI business.
+Drive adoption of Oracle Cloud Infrastructure (OCI), and related OCI-based solutions across the partner ecosystem.
+Provide executive-level advisory to customers on OCI cloud strategy, modernization, and innovation.
+
+Partner & Ecosystem Engagement
+
+
+
+Act as a trusted advisor to key partners, helping them build and scale cloud solution practices.
+Enable partners on OCI architecture, CSP models and managed services delivery.
+Support partner differentiation through solution packaging, IP development, and vertical use cases.
+Participate in joint account planning and pipeline acceleration activities.
+
+Pre-Sales & Revenue Contribution
+
+
+
+Partner with sales leadership to shape deals and influence technical win strategies.
+Partner with Services in support of partner/client opportunities.
+Contribute to proposals, RFPs, and solution designs that align with customer outcomes.
+Accelerate pipeline through architecture validation, demos, and technical storytelling.
+Drive revenue influenced through solution design and partner engagement.
+
+What We're Looking For
+
+
+
+A Certified OCI Architect Professional
+Must have min 5-year track record of Oracle Cloud Infrastructure (OCI) experience.
+8+ years of experience in cloud architecture, consulting, or sales engineering overall.
+Experience and understanding of OCI’s strategy: Enterprise databases, AI infrastructure and High-Performance workloads. 
+Understanding of OCI workloads running on premises or hyperscalers (AWS, Azure, GCP)
+Experience working in a partner/channel or CSP ecosystem.
+Strong client-facing and executive communication skills.
+Ability to influence partners, customers, and internal stakeholders.
+Deep expertise in Oracle Cloud Infrastructure (OCI) (compute, networking, identity, security and data applications).
+Strong understanding of hybrid cloud, Kubernetes and automation.
+
+Preferred Qualifications
+
+
+
+OCI certification is a must
+Oracle related certifications
+Data, Database or Data/AI certifications
+AWS, Azure or GCP certifications.
+
+Work Arrangement
+Fully Remote: Must be able to travel to an Arrow office location as requested by Arrow leadership.
+
+
+
+
+What's In It For You
+At Arrow, we recognize that financial rewards and great benefits are important aspects of an ideal job. That’s why we offer competitive financial compensation, including various compensation plans, and a solid benefits package.
+
+
+
+Medical, Dental, Vision Insurance
+401k, With Matching Contributions
+Paid Time Off (including sick, holiday, vacation, etc.)
+Health Savings Account (HSA)/Health Reimbursement Account (HRA) Options
+Growth Opportunities
+Short-Term/Long-Term Disability Insurance
+And more!
+
+Annual Hiring Range/Hourly Rate:
+$126,300.00 - $200,200.00
+Actual compensation offer to candidate may vary from posted hiring range based upon geographic location, work experience, education, and/or skill level. The pay ratio between base pay and target incentive (if applicable) will be finalized at offer.
+
+
+
+Location:US-TX-Texas (Remote Employees)-Central Time Zone
+Remote work employees may be required to be present at the closest designated Arrow office for work-related purposes, at the Company’s request and sole discretion.
+Time Type:Full time
+Job Category:Sales
+EEO Statement:
+Arrow is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, gender, age, sexual orientation, gender identity, national origin, veteran or disability status. (Arrow EEO/AAP policy)
+
+
+
+
+All Arrow job postings are for existing job vacancies. We anticipate this requisition will be open for a minimum of five days, though it may be open for a longer period of time. We encourage your prompt application.
+
+
+
+
+In any materials you submit, you may redact or remove age-identifying information such as age, date of birth, or dates of school attendance or graduation. You will not be penalized for redacting or removing this information.
