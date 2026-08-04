@@ -1,0 +1,482 @@
+[
+    {
+      "rows_compared": 26,
+      "missing_rows": [],
+      "per_field_accuracy_pct": {
+        "title": 84.6,
+        "company": 88.5,
+        "location": 84.6,
+        "remote_policy": 42.3,
+        "salary_min": 100,
+        "salary_max": 100,
+        "currency": 100,
+        "salary_period": 100,
+        "seniority": 65.4,
+        "required_skills": 7.7,
+        "years_experience_min": 84.6,
+        "language": 88.5,
+        "needs_review": 61.5
+      },
+      "required_skills_f1_pct": 53.9,
+      "overall_field_accuracy_pct": 77.5,
+      "mismatch_count": 76,
+      "mismatches": [
+        {
+          "row": "2",
+          "field": "company",
+          "expected": "",
+          "got": "non spécifié"
+        },
+        {
+          "row": "2",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "2",
+          "field": "required_skills",
+          "expected": "ISO 9001, ISO 22000, 8D, PDCA, AMDEC, SPC, Ishikawa, 5 Why, QRQC, Lean, 5S, Kaizen, Six Sigma, Excel, ERP",
+          "got": "ISO 9001, ISO 22000, 8D, PDCA, AMDEC, SPC, Ishikawa, 5 Why, QRQC, Excel, ERP"
+        },
+        {
+          "row": "3",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "3",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "mid"
+        },
+        {
+          "row": "3",
+          "field": "required_skills",
+          "expected": "génie mécanique, mécatronique, conduite machine CMC, conduite machine moule",
+          "got": "génie mécanique, mécatronique, production industrielle, conducteur machine CMC, conducteur machine moule"
+        },
+        {
+          "row": "3",
+          "field": "needs_review",
+          "expected": "FALSE",
+          "got": true
+        },
+        {
+          "row": "4",
+          "field": "required_skills",
+          "expected": "Active Directory, systèmes d'exploitation, architecture systèmes et réseaux, ERP, gestion de parc informatique, tests et validation des applications, sécurité informatique",
+          "got": "matériel informatique, logiciels informatiques, systèmes d'exploitation, architecture systèmes et réseaux, Active Directory, ERP, diagnostic informatique, tests et validation d'applications, outils de gestion de parc informatique"
+        },
+        {
+          "row": "4",
+          "field": "needs_review",
+          "expected": "FALSE",
+          "got": true
+        },
+        {
+          "row": "5",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "5",
+          "field": "seniority",
+          "expected": "senior",
+          "got": ""
+        },
+        {
+          "row": "5",
+          "field": "required_skills",
+          "expected": "réglage mécanique, diagnostic de pannes, maintenance industrielle, contrôle qualité",
+          "got": ""
+        },
+        {
+          "row": "5",
+          "field": "needs_review",
+          "expected": "FALSE",
+          "got": true
+        },
+        {
+          "row": "6",
+          "field": "required_skills",
+          "expected": "procédures douanières, réglementation douanière et fiscale, logiciels de gestion transit/logistique",
+          "got": ""
+        },
+        {
+          "row": "7",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": ""
+        },
+        {
+          "row": "7",
+          "field": "years_experience_min",
+          "expected": "0",
+          "got": ""
+        },
+        {
+          "row": "8",
+          "field": "title",
+          "expected": "Conseiller de vente Produits Techniques",
+          "got": "Conseiller de vente Produits Techniques Fnac La Marsa"
+        },
+        {
+          "row": "8",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "8",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "unclear"
+        },
+        {
+          "row": "8",
+          "field": "required_skills",
+          "expected": "vente, conseil client, produits technologiques, mise en rayon",
+          "got": "vente, conseil client, argumentation, merchandising"
+        },
+        {
+          "row": "9",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "9",
+          "field": "needs_review",
+          "expected": "TRUE",
+          "got": false
+        },
+        {
+          "row": "10",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "unclear"
+        },
+        {
+          "row": "10",
+          "field": "required_skills",
+          "expected": "GMAO, automatisme, automates programmables (Siemens), VBA, Python, SQL, IoT, supervision industrielle, maintenance préventive",
+          "got": "Automatisme, GMAO, VBA, Python, SQL, IoT, Siemens, Supervision industrielle, Maintenance préventive, Maintenance prédictive"
+        },
+        {
+          "row": "11",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "11",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "unclear"
+        },
+        {
+          "row": "11",
+          "field": "required_skills",
+          "expected": "Odoo, SAP, Sage X3, Microsoft Dynamics, Oracle, ERP, CRM, gestion ventes/achats/stocks/facturation",
+          "got": "ERP, Odoo, SAP, Sage X3, Microsoft Dynamics, Oracle, gestion, ventes, achats, stocks, facturation, CRM"
+        },
+        {
+          "row": "11",
+          "field": "needs_review",
+          "expected": "FALSE",
+          "got": true
+        },
+        {
+          "row": "12",
+          "field": "required_skills",
+          "expected": "Excel, ERP (Sage, Only Soft), analyse financière, fiscalité, IFRS",
+          "got": "Excel, Sage, only soft, analyse financière, fiscalité, Anglais"
+        },
+        {
+          "row": "13",
+          "field": "title",
+          "expected": "Learning and Quality Manager",
+          "got": "Learning & Quality Manager"
+        },
+        {
+          "row": "13",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "unclear"
+        },
+        {
+          "row": "13",
+          "field": "required_skills",
+          "expected": "Lean Six Sigma, CX Standard, MS Office (Word, Excel), Adult Learning Theory, facilitation, call center metrics",
+          "got": "Lean Six Sigma, CX Standard, training program development, Adult Learning Theory, Facilitation, MS Office, Word, Excel"
+        },
+        {
+          "row": "13",
+          "field": "language",
+          "expected": "en",
+          "got": "fr"
+        },
+        {
+          "row": "14",
+          "field": "title",
+          "expected": "Warehouse & Stock Assistant",
+          "got": "Warehouse & Stock Assistant (CIVP Eligible)"
+        },
+        {
+          "row": "14",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "14",
+          "field": "required_skills",
+          "expected": "ERP, Odoo, inventory management, stock counts, Excel, Word, logistics",
+          "got": "Logistics, inventory management, ERP systems, Odoo, Excel, Word, email"
+        },
+        {
+          "row": "14",
+          "field": "years_experience_min",
+          "expected": "0",
+          "got": ""
+        },
+        {
+          "row": "15",
+          "field": "required_skills",
+          "expected": "Java, CRM, Radius, cloud platforms, ITIL, telecom ESS, databases, reporting tools",
+          "got": "Java, CRM, Radius, Cloud platforms, ITIL, SQL, Databases"
+        },
+        {
+          "row": "15",
+          "field": "needs_review",
+          "expected": "TRUE",
+          "got": false
+        },
+        {
+          "row": "16",
+          "field": "location",
+          "expected": "Tunis, Tunisia",
+          "got": "US-TX-Texas"
+        },
+        {
+          "row": "16",
+          "field": "required_skills",
+          "expected": "Oracle Cloud Infrastructure (OCI), cloud architecture, hybrid cloud, Kubernetes, automation, AWS, Azure, GCP, databases",
+          "got": "Oracle Cloud Infrastructure (OCI), cloud architecture, hybrid cloud, Kubernetes, automation, AI, security, data platforms"
+        },
+        {
+          "row": "17",
+          "field": "required_skills",
+          "expected": "Routing, Switching, VPN, LAN, WAN, VLAN, network security, firewall, intrusion detection, SD-WAN, SASE, ZTNA, SIEM, XDR, EDR, WAF, NAC, CASB, RADIUS, PKI",
+          "got": "Routing, Switching, VPN, LAN, WAN, VLAN, Network Security, Firewall, Intrusion Detection, anti-virus, SD-WAN, SASE, ZTNA, SIEM, XDR, EDR, WAF, Email Security, NAC, CASB, RADIUS, PKI, IKE, Certificates"
+        },
+        {
+          "row": "18",
+          "field": "required_skills",
+          "expected": "procurement, sourcing, contract management, supplier evaluation, inventory management, Microsoft Excel, ERP (SAP)",
+          "got": "Supply Chain Management, Purchasing, Sourcing, Contract management, Microsoft Office Suite, Excel, ERP, SAP"
+        },
+        {
+          "row": "18",
+          "field": "language",
+          "expected": "en",
+          "got": "fr"
+        },
+        {
+          "row": "18",
+          "field": "needs_review",
+          "expected": "TRUE",
+          "got": false
+        },
+        {
+          "row": "19",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": ""
+        },
+        {
+          "row": "19",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "unclear"
+        },
+        {
+          "row": "19",
+          "field": "required_skills",
+          "expected": "Suite Adobe, PAO, prépresse, chaîne graphique, mise en page",
+          "got": "Suite Adobe, PAO, chaîne graphique, production print, prépresse, informatique"
+        },
+        {
+          "row": "19",
+          "field": "needs_review",
+          "expected": "FALSE",
+          "got": true
+        },
+        {
+          "row": "20",
+          "field": "location",
+          "expected": "Mannouba, La Manouba, Tunisie",
+          "got": "Mannouba, Tunisie"
+        },
+        {
+          "row": "20",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "20",
+          "field": "required_skills",
+          "expected": "machines de photocopie et tirage, traitement de texte, mise en page, recherche internet",
+          "got": "manipulation de machines de photocopie, tirage, impression, informatique, traitement de texte, mise en page, recherche sur internet"
+        },
+        {
+          "row": "21",
+          "field": "company",
+          "expected": "Cabinet Dietika",
+          "got": "Cabinet Dietika × Impact"
+        },
+        {
+          "row": "21",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "21",
+          "field": "seniority",
+          "expected": "mid",
+          "got": "junior"
+        },
+        {
+          "row": "21",
+          "field": "required_skills",
+          "expected": "nutrition humaine, nutrition thérapeutique, nutrition sportive, InBody, LB Web",
+          "got": "nutrition humaine, nutrition thérapeutique, nutrition sportive"
+        },
+        {
+          "row": "22",
+          "field": "required_skills",
+          "expected": "comptabilité générale, IFRS, fiscalité française (TVA, IS, CVAE, CFE, DADS2, TVS), rapprochements bancaires, états financiers, liasses de consolidation",
+          "got": "comptabilité, fiscalité, IFRS, TVA, IS, CVAE, CFE, DADS2, TVS, rapprochements bancaires, écritures d'inventaire, liasses fiscales, liasses de consolidation"
+        },
+        {
+          "row": "23",
+          "field": "title",
+          "expected": "Chef d'Équipe",
+          "got": "Chef d’Équipe – GCS – Zriba (Zaghouan)"
+        },
+        {
+          "row": "23",
+          "field": "company",
+          "expected": "Les Grandes Carrières du Sahel",
+          "got": "Les Grandes Carrières du Sahel (GCS)"
+        },
+        {
+          "row": "23",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "23",
+          "field": "required_skills",
+          "expected": "électromécanique, électricité industrielle, maintenance industrielle, diagnostic de pannes moteurs, lecture de schémas électriques, mécanique, hydraulique, consignation électrique",
+          "got": "Électromécanique, Électricité Industrielle, Maintenance Industrielle, Diagnostic de pannes moteurs, lecture de schémas électriques, mécanique, hydraulique"
+        },
+        {
+          "row": "23",
+          "field": "years_experience_min",
+          "expected": "2",
+          "got": 3
+        },
+        {
+          "row": "24",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "24",
+          "field": "seniority",
+          "expected": "junior",
+          "got": "unclear"
+        },
+        {
+          "row": "24",
+          "field": "required_skills",
+          "expected": "رخصة قيادة B, معرفة الطرقات",
+          "got": ""
+        },
+        {
+          "row": "24",
+          "field": "needs_review",
+          "expected": "FALSE",
+          "got": true
+        },
+        {
+          "row": "25",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "25",
+          "field": "required_skills",
+          "expected": "Word, Excel, أرشفة الملفات, إعداد التقارير",
+          "got": "Word, Excel, العربية, الفرنسية"
+        },
+        {
+          "row": "26",
+          "field": "location",
+          "expected": "أريانة, تونس",
+          "got": "Ariana, Tunisie"
+        },
+        {
+          "row": "26",
+          "field": "remote_policy",
+          "expected": "unclear",
+          "got": "onsite"
+        },
+        {
+          "row": "26",
+          "field": "required_skills",
+          "expected": "français (niveau B2)",
+          "got": "français"
+        },
+        {
+          "row": "26",
+          "field": "years_experience_min",
+          "expected": "0",
+          "got": ""
+        },
+        {
+          "row": "26",
+          "field": "language",
+          "expected": "ar",
+          "got": "fr"
+        },
+        {
+          "row": "26",
+          "field": "needs_review",
+          "expected": "TRUE",
+          "got": false
+        },
+        {
+          "row": "27",
+          "field": "location",
+          "expected": "سوسة, تونس",
+          "got": "سوسة"
+        },
+        {
+          "row": "27",
+          "field": "required_skills",
+          "expected": "تدريس اللغة الإنجليزية",
+          "got": ""
+        }
+      ]
+    }
+  ]
