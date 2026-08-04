@@ -1,0 +1,462 @@
+{
+  "name": "job-listing-extractor",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -16,
+        16
+      ],
+      "id": "86640150-5d1b-4f93-9512-664b6e35d0d6",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1af5mKNPT3wlyJTKLsN8V7YccPKkIb0HXX80d7SfXVO8",
+          "mode": "list",
+          "cachedResultName": "input",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1af5mKNPT3wlyJTKLsN8V7YccPKkIb0HXX80d7SfXVO8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 245184377,
+          "mode": "list",
+          "cachedResultName": "Feuille 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1af5mKNPT3wlyJTKLsN8V7YccPKkIb0HXX80d7SfXVO8/edit#gid=245184377"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        16
+      ],
+      "id": "9d7e8bcd-6797-4e17-8c17-967aac7b1ece",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "61Eo6yzzQDWJeO7H",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.raw_text }}",
+        "attributes": {
+          "attributes": [
+            {
+              "name": "title",
+              "description": "The job title exactly as written"
+            },
+            {
+              "name": "company",
+              "description": "Hiring company name"
+            },
+            {
+              "name": "location",
+              "description": "City and country if stated"
+            },
+            {
+              "name": "remote_policy",
+              "description": "One of: onsite, hybrid, remote, unclear"
+            },
+            {
+              "name": "salary_min",
+              "type": "number",
+              "description": "Lower bound as a number, omit if not stated"
+            },
+            {
+              "name": "salary_max",
+              "type": "number",
+              "description": "Upper bound as a number, omit if not stated"
+            },
+            {
+              "name": "currency",
+              "description": "TND, EUR, USD, etc. Omit if no salary given"
+            },
+            {
+              "name": "salary_period",
+              "description": "year, month, or hour"
+            },
+            {
+              "name": "seniority",
+              "description": "One of: junior, mid, senior, unclear"
+            },
+            {
+              "name": "required_skills",
+              "description": "Technical skills mentioned, as a comma-separated list"
+            },
+            {
+              "name": "years_experience_min",
+              "type": "number",
+              "description": "Minimum years required, omit if not stated"
+            },
+            {
+              "name": "language",
+              "description": "Language the listing is written in: ar, fr, or en"
+            },
+            {
+              "name": "needs_review",
+              "type": "boolean",
+              "description": "true if salary or seniority was ambiguous"
+            }
+          ]
+        },
+        "options": {
+          "systemPromptTemplate": "You are an expert extraction system for job listings.\nOnly extract information that is explicitly stated in the text.\nNever infer a salary from the job title or company.\nIf a value is absent, omit the field entirely rather than guessing.\nSet needs_review to true when salary or seniority is ambiguous."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "typeVersion": 1.2,
+      "position": [
+        656,
+        16
+      ],
+      "id": "daec024f-ea3e-4eec-84be-005f84194ab0",
+      "name": "Information Extractor"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        624,
+        336
+      ],
+      "id": "18cf9256-d74f-402a-950f-48aca43e7947",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "bQNS0w6DQ1fdo6y2",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1af5mKNPT3wlyJTKLsN8V7YccPKkIb0HXX80d7SfXVO8",
+          "mode": "list",
+          "cachedResultName": "input",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1af5mKNPT3wlyJTKLsN8V7YccPKkIb0HXX80d7SfXVO8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 521083283,
+          "mode": "list",
+          "cachedResultName": "output",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1af5mKNPT3wlyJTKLsN8V7YccPKkIb0HXX80d7SfXVO8/edit#gid=521083283"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "title": "={{ $json.output.title }}",
+            "location": "={{ $json.output.location }}",
+            "remote_policy": "={{ $json.output.remote_policy }}",
+            "salary_min": "={{ $json.output.salary_min }}",
+            "salary_max": "={{ $json.output.salary_max }}",
+            "currency": "={{ $json.output.currency }}",
+            "salary_period": "={{ $json.output.salary_period }}",
+            "seniority": "={{ $json.output.seniority }}",
+            "required_skills": "={{ $json.output.required_skills }}",
+            "years_experience_min": "={{ $json.output.years_experience_min }}",
+            "needs_review": "={{ $json.output.needs_review }}",
+            "company": "={{ $json.output.company }}",
+            "row_number": "={{ $('Get row(s) in sheet').item.json.row_number }}",
+            "language": "={{ $json.output.language}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "location",
+              "displayName": "location",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "remote_policy",
+              "displayName": "remote_policy",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "salary_min",
+              "displayName": "salary_min",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "salary_max",
+              "displayName": "salary_max",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "currency",
+              "displayName": "currency",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "salary_period",
+              "displayName": "salary_period",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "seniority",
+              "displayName": "seniority",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "required_skills",
+              "displayName": "required_skills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "years_experience_min",
+              "displayName": "years_experience_min",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "language",
+              "displayName": "language",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "needs_review",
+              "displayName": "needs_review",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1024,
+        16
+      ],
+      "id": "95d287a6-f91f-4efc-94c6-9b59ff16d305",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "61Eo6yzzQDWJeO7H",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        432,
+        16
+      ],
+      "id": "10d58814-b330-4ca6-a889-a1a89ec67d2d",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1248,
+        16
+      ],
+      "id": "d65c76da-adbf-459c-b10e-d7dcad70405a",
+      "name": "Wait",
+      "webhookId": "65302b9d-2343-47c9-816a-e9388a7ca96a"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Information Extractor",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Information Extractor": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Information Extractor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "f9805904-809e-41d2-a180-83432bcfd83d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "14d7113f6ac03398a3f5d70e614dda161378f17c529f888b45ba5eebb5ad3e67"
+  },
+  "nodeGroups": [],
+  "id": "xjZwgUZAkKpXlpHP",
+  "tags": []
+}
